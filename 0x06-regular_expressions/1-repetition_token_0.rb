@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 def match_pattern(input)
-    regex = /hbt{0,6}n/
+    regex = /hbt{2,5}n/
 
     match_result = input.match(regex)
 
