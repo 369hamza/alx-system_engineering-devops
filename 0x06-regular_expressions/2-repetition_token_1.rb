@@ -5,6 +5,8 @@ def match_school(input)
 
     match_result = input.match(regex)
 
+    puts "Input: #{input}"
+    puts "Match Result: #{match_result.inspect}"
     puts match_result ? match_result[0] : ''
 end
 
