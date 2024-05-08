@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 def match_school(input)
-    regex = /hbt{1,4}n/
+    regex = /hb(t{1,4})n/
 
     match_result = input.match(regex)
 
