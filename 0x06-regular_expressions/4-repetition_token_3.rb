@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
 
-def match_school(input)
-    regex = /hbt?+n/
+def match_pattern(input)
+    regex = /hb(t{0,5})n/
 
     match_result = input.match(regex)
 
     puts match_result ? match_result[0] : ''
 end
+
+match_pattern(ARGV[0])
