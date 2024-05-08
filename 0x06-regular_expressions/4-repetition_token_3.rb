@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 def match_pattern(input)
-    regex = /hb(t{0,9})n/
+    regex = /hb(t+)n/
 
     match_result = input.match(regex)
 
