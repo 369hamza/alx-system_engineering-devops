@@ -7,5 +7,3 @@ def match_school(input)
 
     puts match_result ? match_result[0] : ''
 end
-
-match_school(ARGV[0])
