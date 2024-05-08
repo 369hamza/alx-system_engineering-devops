@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-def match_school(input)
+def match_pattern(input)
     regex = /hb(t{2,5})n/
 
     match_result = input.match(regex)
