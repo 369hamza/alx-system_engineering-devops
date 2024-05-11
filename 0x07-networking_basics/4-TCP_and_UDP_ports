@@ -4,10 +4,10 @@ echo "Active Internet connections (only servers)"
 echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
 
 # List TCP listening ports
-netstat -tln | awk '$1 == "tcp" {print $1 "\t" $2 "\t" $4 "\t" $7}' | sed 's/:::/\t/' | sed 's/::/ /'
+netstat -tln | awk '$1 == "tcp" {print $1 "\t" $2 "\t" $4 "\t" $7}'
 
 # List UDP listening ports
-netstat -uln | awk '$1 == "udp" {print $1 "\t" $2 "\t" $4 "\t" $7}' | sed 's/:::/\t/' | sed 's/::/ /'
+netstat -uln | awk '$1 == "udp" {print $1 "\t" $2 "\t" $4 "\t" $7}'
 
 echo "Active UNIX domain sockets (only servers)"
 echo "Proto RefCnt Flags       Type       State         I-Node   PID/Program name    Path"
