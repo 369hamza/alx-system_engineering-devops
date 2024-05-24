@@ -4,8 +4,8 @@
 echo "Active Internet connections (only servers)"
 echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
 
-# List TCP listening ports
-netstat -tln | awk '$1 == "tcp" {print $0}'
+# List TCP listening ports, netstat -tln | awk '$1 == "tcp" {print $0}'
+ss -tlnp | awk '$1 == "tcp" {print $0}'
 
 # List UDP listening ports
 netstat -uln | awk '$1 == "udp" {print $0}'
