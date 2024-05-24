@@ -4,14 +4,14 @@
 echo "Active Internet connections (only servers)"
 echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
 
-# List TCP listening ports with PID/Program name
-ss -tlnp | awk '$1 == "LISTEN" {print "tcp ", $2, $3, $4, $5, $6, $7}'
+# List TCP listening ports
+netstat -tln | awk '$1 == "tcp" {print $0}'
 
-# List UDP listening ports with PID/Program name
-ss -ulnp | awk '$1 == "UNCONN" {print "udp ", $2, $3, $4, $5, $6, $7}'
+# List UDP listening ports
+netstat -uln | awk '$1 == "udp" {print $0}'
 
 echo "Active UNIX domain sockets (only servers)"
 echo "Proto RefCnt Flags       Type       State         I-Node   PID/Program name    Path"
 
-# List UNIX domain sockets with PID/Program name
-ss -xlnp | awk '$1 == "LISTEN" {print "unix ", $2, $3, $4, $5, $6, $7}'
+# List UNIX domain sockets
+netstat -lx | awk '$1 == "unix" {print $0}' 
